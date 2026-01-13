@@ -1,5 +1,6 @@
 import express from 'express';
 
+import { createCategoriesRouter } from './routes/categories.js';
 import { createItemsRouter } from './routes/items.js';
 
 export function createApp() {
@@ -11,6 +12,7 @@ export function createApp() {
   });
 
   app.use(createItemsRouter());
+  app.use(createCategoriesRouter());
 
   // Simple fallback to keep behavior obvious.
   app.use((_req, res) => {
