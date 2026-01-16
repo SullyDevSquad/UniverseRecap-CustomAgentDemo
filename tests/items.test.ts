@@ -22,13 +22,13 @@ describe('items routes', () => {
         description: 'returns item when found',
         id: 'a1',
         expectedStatus: 200,
-        expectedBody: { item: { id: 'a1', name: 'Pencil', priceCents: 199 } },
+        expectedBody: { item: { id: 'a1', name: 'Pencil', priceCents: 199, categoryId: 'cat2' } },
       },
       {
         description: 'returns item when found (second item)',
         id: 'b2',
         expectedStatus: 200,
-        expectedBody: { item: { id: 'b2', name: 'Notebook', priceCents: 599 } },
+        expectedBody: { item: { id: 'b2', name: 'Notebook', priceCents: 599, categoryId: 'cat1' } },
       },
       {
         description: 'returns 404 when item not found',
